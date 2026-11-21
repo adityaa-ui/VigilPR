@@ -1,17 +1,28 @@
 {
-  "name": "vigilpr-tmp",
+  "name": "vigilpr",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --experimental-strip-types scripts/test-pipeline.mjs",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^4.0.121",
+    "@neondatabase/serverless": "^1.2.1",
+    "@octokit/app": "^16.1.4",
+    "@octokit/rest": "^22.0.1",
+    "ai": "^7.0.177",
+    "drizzle-orm": "^0.45.4",
+    "inngest": "^4.26.2",
     "next": "16.3.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
